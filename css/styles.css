@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 20vh;
+    width: 100vw;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja_encabezado {
+    height: 20px;
+    width: 20px;
+    background-color: yellow;
+    border: 3px solid red;
+    display: flex; /* agregado */
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido {
+    display: flex;
+    width: 100vw;
+    height: 40vh;
+}
+
+nav {
+    height: 10vh;
+    width: 100vw;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside {
+    width: 40vw;
+    background-color: blue;
+    display: flex;
+}
+
+.caja {
+    height: 60px;
+    background-color: rgb(139, 139, 139);
+    border: 15px solid green;
+}
+
+main {
+    width: 60vw;
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+footer {
+    height: 30vh;
+    width: 100vw;
+    background-color: purple;
+}
+
+@media (max-width: 768px) {
+    .contenido {
+        flex-direction: column;
+        height: auto;
+    }
+
+    main {
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .caja {
+        height: 10vh;
+    }
+
+    aside {
+        width: 100vw;
+        height: 10vh;
+        order: 2;
+    }
+}
